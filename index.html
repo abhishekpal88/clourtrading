@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,76 +12,93 @@
 
 body {
     margin: 0;
-    background: #050505;
-    color: white;
+    padding: 0;
+    background: #000;
     font-family: Arial, sans-serif;
-    text-align: center;
+    color: white;
 }
 
 .container {
-    max-width: 600px;
+    width: 100%;
+    max-width: 680px;
     margin: auto;
+    background: #000;
+    text-align: center;
     min-height: 100vh;
-    padding-bottom: 30px;
 }
 
 .header {
-    background: linear-gradient(90deg,#8d0000,#ed2700,#8d0000);
-    padding: 17px;
-    font-size: 36px;
-    font-weight: 900;
-    color: white;
-    border-bottom: 2px solid gold;
+    background: #a50000;
+    padding: 18px 5px;
+    color: #ffdf78;
+    font-size: 40px;
+    font-weight: bold;
 }
 
 .logo {
-    width: 210px;
-    height: 210px;
-    object-fit: cover;
+    width: 230px;
+    height: 230px;
     border-radius: 50%;
-    border: 4px solid gold;
-    margin: 25px auto;
-    box-shadow: 0 0 20px orange;
-}
-
-.instructions {
-    background: #b50000;
-    padding: 13px;
-    margin: 10px;
-    font-weight: bold;
-    font-size: 17px;
-}
-
-.join {
+    border: 7px solid white;
+    object-fit: cover;
+    margin: 28px auto;
     display: block;
-    background: linear-gradient(90deg,#5100d5,#a000ff);
+    box-shadow: 0 0 20px white;
+}
+
+.instruction {
+    background: #c71920;
+    margin: 10px 18px 25px;
+    padding: 12px;
+    font-size: 19px;
+    font-weight: bold;
+    line-height: 1.5;
+}
+
+.join-btn {
+    display: block;
+    margin: 25px 18px;
+    padding: 24px 10px;
+    border-radius: 60px;
+    background: linear-gradient(90deg,#3210a2,#4b239f);
+    border: 5px solid white;
     color: white;
-    padding: 17px;
-    margin: 25px 15px;
-    border-radius: 8px;
-    font-size: 21px;
+    font-size: 25px;
     font-weight: bold;
     text-decoration: none;
-    box-shadow: 0 0 15px #7800ff;
+}
+
+.timer-box {
+    background: #ffdb28;
+    border: 8px solid white;
+    margin: 28px 35px;
+    padding: 12px 5px;
+    color: #c92330;
 }
 
 .timer {
-    background: #ffce00;
-    color: black;
-    padding: 15px;
-    margin: 20px 15px;
-    border-radius: 6px;
-    font-size: 28px;
+    font-size: 38px;
     font-weight: bold;
 }
 
-.bottom {
-    background: #b50000;
-    padding: 15px;
-    margin: 20px 10px;
-    font-weight: bold;
+.labels {
+    display: flex;
+    justify-content: space-around;
+    color: black;
     font-size: 17px;
+    font-weight: bold;
+    margin-top: 10px;
 }
+
+.bottom {
+    background: #c90020;
+    padding: 18px 5px;
+    font-size: 25px;
+    font-weight: bold;
+    line-height: 1.5;
+    margin-top: 25px;
+}
+
 </style>
 </head>
 
@@ -89,42 +106,53 @@ body {
 
 <div class="container">
 
-    <div class="header">9K.CLUB</div>
-
-    <img src="9k-logo.jpg" class="logo" alt="9K.CLUB">
-
-    <div class="instructions">
-        WELCOME TO 9K.CLUB
+    <div class="header">
+        9K.CLUB
     </div>
 
-    <div class="join">
-        JOIN VIP CHANNEL
+    <img src="9k-logo.jpg" class="logo">
+
+    <div class="instruction">
+        💸 क्या आप भी पैसा कमाना चाहते हैं?
+        नीचे JOIN MY COMMUNITY के Button पर Click करें 🎯
     </div>
 
-    <div class="timer" id="timer">
-        05:00
+    <div class="join-btn">
+        ✈ JOIN VIP CHANNEL ✈
+    </div>
+
+    <div class="timer-box">
+
+        <div class="timer" id="timer">
+            00 : 00 : 00 : 18
+        </div>
+
+        <div class="labels">
+            <span>DAYS</span>
+            <span>HOURS</span>
+            <span>MINUTES</span>
+            <span>SECONDS</span>
+        </div>
+
     </div>
 
     <div class="bottom">
-        THANK YOU FOR VISITING 9K.CLUB
+        Your request will be accepted within 2 seconds.
     </div>
 
 </div>
 
 <script>
-let seconds = 300;
+let seconds = 18;
 
-setInterval(function() {
-    if(seconds > 0) seconds--;
-
-    let min = Math.floor(seconds / 60);
-    let sec = seconds % 60;
+setInterval(() => {
+    if (seconds > 0) seconds--;
 
     document.getElementById("timer").innerText =
-        String(min).padStart(2,'0') + ":" +
-        String(sec).padStart(2,'0');
+    "00 : 00 : 00 : " +
+    String(seconds).padStart(2, "0");
 
-},1000);
+}, 1000);
 </script>
 
 </body>
