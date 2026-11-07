@@ -1,18 +1,21 @@
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>9K.CLUB</title>
+<meta name="theme-color" content="#000000">
+
+<title>9K.CLUB Official Community</title>
 
 <style>
+
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
 body {
-    margin: 0;
-    padding: 0;
     background: #000;
     font-family: Arial, sans-serif;
     color: white;
@@ -20,83 +23,131 @@ body {
 
 .container {
     width: 100%;
-    max-width: 680px;
-    margin: auto;
-    background: #000;
-    text-align: center;
+    max-width: 600px;
     min-height: 100vh;
+    margin: auto;
+    background: #050505;
+    text-align: center;
+    overflow: hidden;
 }
 
+/* HEADER */
+
 .header {
-    background: #a50000;
-    padding: 18px 5px;
-    color: #ffdf78;
-    font-size: 40px;
-    font-weight: bold;
+    background: linear-gradient(
+        90deg,
+        #900000,
+        #e32619,
+        #900000
+    );
+
+    padding: 18px 10px;
+    font-size: 38px;
+    font-weight: 900;
+    color: #ffdc75;
+    letter-spacing: 2px;
+    border-bottom: 2px solid gold;
+}
+
+/* LOGO */
+
+.logo-area {
+    padding: 25px 10px;
 }
 
 .logo {
-    width: 230px;
-    height: 230px;
-    border-radius: 50%;
-    border: 7px solid white;
+    width: 220px;
+    height: 220px;
+    max-width: 70vw;
+    max-height: 70vw;
     object-fit: cover;
-    margin: 28px auto;
-    display: block;
-    box-shadow: 0 0 20px white;
+    border-radius: 50%;
+    border: 5px solid gold;
+    box-shadow: 0 0 20px orange;
 }
+
+/* INSTRUCTIONS */
 
 .instruction {
-    background: #c71920;
-    margin: 10px 18px 25px;
-    padding: 12px;
-    font-size: 19px;
+    background: #bd1717;
+    margin: 10px 15px 25px;
+    padding: 15px 10px;
+    font-size: 18px;
     font-weight: bold;
-    line-height: 1.5;
+    line-height: 1.6;
+    border: 1px solid #ffcc55;
 }
 
-.join-btn {
+/* TELEGRAM BUTTON */
+
+.join-button {
     display: block;
     margin: 25px 18px;
-    padding: 24px 10px;
+    padding: 22px 10px;
+
+    background: linear-gradient(
+        90deg,
+        #32118f,
+        #6724c9
+    );
+
+    border: 4px solid white;
     border-radius: 60px;
-    background: linear-gradient(90deg,#3210a2,#4b239f);
-    border: 5px solid white;
+
     color: white;
-    font-size: 25px;
-    font-weight: bold;
     text-decoration: none;
+    font-size: 23px;
+    font-weight: 900;
+
+    box-shadow: 0 0 15px #6724c9;
 }
 
+.join-button:active {
+    transform: scale(0.97);
+}
+
+/* COUNTDOWN */
+
 .timer-box {
-    background: #ffdb28;
-    border: 8px solid white;
-    margin: 28px 35px;
-    padding: 12px 5px;
-    color: #c92330;
+    background: #ffdc28;
+    border: 6px solid white;
+    margin: 25px 28px;
+    padding: 15px 5px;
+    color: #bd2020;
 }
 
 .timer {
-    font-size: 38px;
-    font-weight: bold;
+    font-size: 36px;
+    font-weight: 900;
+    letter-spacing: 2px;
 }
 
-.labels {
+.timer-labels {
     display: flex;
     justify-content: space-around;
     color: black;
-    font-size: 17px;
+    font-size: 12px;
     font-weight: bold;
-    margin-top: 10px;
+    margin-top: 8px;
 }
 
-.bottom {
-    background: #c90020;
-    padding: 18px 5px;
-    font-size: 25px;
+/* BOTTOM BANNER */
+
+.bottom-banner {
+    background: #bd101c;
+    margin: 20px 10px;
+    padding: 18px 10px;
+    font-size: 18px;
     font-weight: bold;
     line-height: 1.5;
-    margin-top: 25px;
+}
+
+/* FOOTER */
+
+.footer {
+    padding: 15px;
+    color: #999;
+    font-size: 12px;
 }
 
 </style>
@@ -106,53 +157,110 @@ body {
 
 <div class="container">
 
+    <!-- BRAND NAME -->
+
     <div class="header">
         9K.CLUB
     </div>
 
-    <img src="9k-logo.jpg" class="logo">
+    <!-- LOGO -->
+
+    <div class="logo-area">
+
+        <img
+            src="9k-logo.jpg"
+            class="logo"
+            alt="9K CLUB Logo"
+        >
+
+    </div>
+
+    <!-- INSTRUCTION -->
 
     <div class="instruction">
-        💸 क्या आप भी पैसा कमाना चाहते हैं?
-        नीचे JOIN MY COMMUNITY के Button पर Click करें 🎯
+
+        WELCOME TO 9K.CLUB
+
+        <br>
+
+        Join Our Official Community
+
     </div>
 
-    <div class="join-btn">
+    <!-- TELEGRAM BUTTON -->
+
+    <a
+        href="https://t.me/+mErhNwtQpA9jNzFl"
+        class="join-button"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+
         ✈ JOIN VIP CHANNEL ✈
-    </div>
+
+    </a>
+
+    <!-- COUNTDOWN TIMER -->
 
     <div class="timer-box">
 
         <div class="timer" id="timer">
-            00 : 00 : 00 : 18
+            00 : 00 : 18
         </div>
 
-        <div class="labels">
-            <span>DAYS</span>
-            <span>HOURS</span>
+        <div class="timer-labels">
+
             <span>MINUTES</span>
+
             <span>SECONDS</span>
+
         </div>
 
     </div>
 
-    <div class="bottom">
-        Your request will be accepted within 2 seconds.
+    <!-- BOTTOM MESSAGE -->
+
+    <div class="bottom-banner">
+
+        Your Community Invitation Is Ready!
+
+    </div>
+
+    <!-- FOOTER -->
+
+    <div class="footer">
+
+        © 2026 9K.CLUB
+
     </div>
 
 </div>
 
+<!-- JAVASCRIPT -->
+
 <script>
+
 let seconds = 18;
 
-setInterval(() => {
-    if (seconds > 0) seconds--;
+const timer = document.getElementById("timer");
 
-    document.getElementById("timer").innerText =
-    "00 : 00 : 00 : " +
-    String(seconds).padStart(2, "0");
+setInterval(function() {
+
+    if (seconds > 0) {
+        seconds--;
+    }
+
+    let minutes = Math.floor(seconds / 60);
+
+    let remainingSeconds = seconds % 60;
+
+    timer.innerHTML =
+        String(minutes).padStart(2, '0') +
+        " : " +
+        String(remainingSeconds).padStart(2, '0');
 
 }, 1000);
+
 </script>
 
 </body>
