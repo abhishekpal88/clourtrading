@@ -12,68 +12,75 @@
 
 body {
     margin: 0;
-    background: #000;
+    background: #050505;
     color: white;
     font-family: Arial, sans-serif;
     text-align: center;
 }
 
 .container {
-    max-width: 680px;
+    max-width: 600px;
     margin: auto;
     min-height: 100vh;
-    background: #050505;
+    padding-bottom: 30px;
 }
 
 .header {
-    background: #a40000;
-    color: #ffd76a;
-    padding: 15px;
-    font-size: 40px;
-    font-weight: bold;
-    letter-spacing: 2px;
+    background: linear-gradient(90deg,#8d0000,#ed2700,#8d0000);
+    padding: 17px;
+    font-size: 36px;
+    font-weight: 900;
+    color: white;
+    border-bottom: 2px solid gold;
 }
 
 .logo {
-    width: 300px;
-    max-width: 85%;
-    height: 300px;
+    width: 210px;
+    height: 210px;
     object-fit: cover;
     border-radius: 50%;
-    border: 6px solid white;
-    margin: 30px auto;
-    box-shadow: 0 0 20px #ffb000;
+    border: 4px solid gold;
+    margin: 25px auto;
+    box-shadow: 0 0 20px orange;
 }
 
-.banner {
-    background: #c71919;
-    padding: 15px;
-    margin: 10px 18px 25px;
-    font-size: 20px;
+.instructions {
+    background: #b50000;
+    padding: 13px;
+    margin: 10px;
     font-weight: bold;
-    line-height: 1.5;
+    font-size: 17px;
 }
 
-.info {
-    background: #171717;
-    border: 2px solid #dca52e;
-    border-radius: 15px;
-    margin: 20px;
-    padding: 25px 15px;
+.join {
+    display: block;
+    background: linear-gradient(90deg,#5100d5,#a000ff);
+    color: white;
+    padding: 17px;
+    margin: 25px 15px;
+    border-radius: 8px;
+    font-size: 21px;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 0 15px #7800ff;
 }
 
-.info h2 {
-    color: #ffcc44;
-}
-
-.info p {
-    line-height: 1.6;
-}
-
-.note {
-    font-size: 12px;
-    color: #aaa;
+.timer {
+    background: #ffce00;
+    color: black;
     padding: 15px;
+    margin: 20px 15px;
+    border-radius: 6px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.bottom {
+    background: #b50000;
+    padding: 15px;
+    margin: 20px 10px;
+    font-weight: bold;
+    font-size: 17px;
 }
 </style>
 </head>
@@ -82,30 +89,43 @@ body {
 
 <div class="container">
 
-    <div class="header">
-        9K.CLUB
-    </div>
+    <div class="header">9K.CLUB</div>
 
-    <img src="9k-logo.jpg" class="logo" alt="9K.CLUB Logo">
+    <img src="9k-logo.jpg" class="logo" alt="9K.CLUB">
 
-    <div class="banner">
+    <div class="instructions">
         WELCOME TO 9K.CLUB
     </div>
 
-    <div class="info">
-        <h2>9K.CLUB</h2>
-        <p>
-            Welcome to our entertainment community.
-            Explore our brand and community information.
-        </p>
+    <div class="join">
+        JOIN VIP CHANNEL
     </div>
 
-    <div class="note">
-        This page is for general entertainment information.
-        No deposits, wagers or financial returns are offered.
+    <div class="timer" id="timer">
+        05:00
+    </div>
+
+    <div class="bottom">
+        THANK YOU FOR VISITING 9K.CLUB
     </div>
 
 </div>
+
+<script>
+let seconds = 300;
+
+setInterval(function() {
+    if(seconds > 0) seconds--;
+
+    let min = Math.floor(seconds / 60);
+    let sec = seconds % 60;
+
+    document.getElementById("timer").innerText =
+        String(min).padStart(2,'0') + ":" +
+        String(sec).padStart(2,'0');
+
+},1000);
+</script>
 
 </body>
 </html>
