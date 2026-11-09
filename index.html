@@ -63,7 +63,7 @@ video {
 
 <h1>Income Proof</h1>
 
-<video controls autoplay muted playsinline preload="auto">
+<video id="incomeVideo" controls autoplay muted playsinline preload="auto">
   <source src="./1000160522.mp4" type="video/mp4">
   Video loading failed.
 </video>
@@ -75,6 +75,25 @@ WhatsApp Now
 </a>
 
 </div>
+
+<script>
+const video = document.getElementById("incomeVideo");
+
+video.addEventListener("error", () => {
+  video.innerHTML = "";
+  const message = document.createElement("p");
+  message.textContent = "Video load nahi ho rahi. MP4 file isi folder mein rakhein.";
+  message.style.color = "white";
+  message.style.padding = "30px 10px";
+  message.style.fontSize = "18px";
+  video.appendChild(message);
+});
+
+video.play().catch(() => {
+  video.muted = true;
+  video.play().catch(() => {});
+});
+</script>
 
 </body>
 </html>
