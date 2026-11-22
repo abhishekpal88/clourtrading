@@ -127,7 +127,19 @@ fbq('trackCustom','TelegramJoinClick');
 }">
 CLICK HERE
 </a>
+.arrow {
+  animation: arrowMove 0.8s ease-in-out infinite alternate;
+  filter: drop-shadow(0 0 8px #00ff32);
+}
 
+@keyframes arrowMove {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(18px);
+  }
+}
 </div>
 
 </body>
