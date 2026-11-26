@@ -1,208 +1,222 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#000000">
-<title>Join Telegram</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Telegram - Message Now</title>
 
-<!-- META PIXEL -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window,document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
+  <!-- Meta Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];
+    t=b.createElement(e);t.async=!0;
+    t.src=v;
+    s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}
+    (window,document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
 
-fbq('init','1910075526819652');
-fbq('track','PageView');
-</script>
+    fbq('init', '1350145040492598');
+    fbq('track', 'PageView');
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1350145040492598&ev=PageView&noscript=1"/>
+  </noscript>
+  <!-- End Meta Pixel Code -->
 
-<noscript>
-<img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1910075526819652&ev=PageView&noscript=1">
-</noscript>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-<style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
+    body {
+      background: #000;
+      color: white;
+      font-family: Arial, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      overflow-x: hidden;
+    }
 
-body{
-background:#000;
-font-family:Arial,sans-serif;
-min-height:100vh;
-}
+    .container {
+      width: 100%;
+      max-width: 600px;
+      min-height: 100vh;
+      padding: 25px 18px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
 
-.container{
-width:100%;
-max-width:480px;
-min-height:100vh;
-margin:auto;
-display:flex;
-flex-direction:column;
-align-items:center;
-padding:125px 15px 30px;
-}
+    .heading {
+      font-size: clamp(30px, 8vw, 48px);
+      font-weight: 900;
+      white-space: nowrap;
+      margin-bottom: 65px;
+    }
 
-.heading{
-font-size:clamp(29px,8vw,43px);
-font-weight:1000;
-text-align:center;
-white-space:nowrap;
-}
+    .red {
+      color: #ff1535;
+    }
 
-.red{color:#ff001e;}
-.yellow{color:#ffff00;}
+    .yellow {
+      color: #ffff00;
+    }
 
-.arrow{
-width:175px;
-height:230px;
-margin-top:35px;
-filter:drop-shadow(0 0 8px #00ff32);
-animation:arrowMove .8s ease-in-out infinite alternate;
-}
+    .arrow {
+      width: 180px;
+      height: 290px;
+      margin-bottom: 65px;
+      animation: moveArrow 1s infinite alternate ease-in-out;
+      filter: drop-shadow(0 0 12px #00ff22);
+    }
 
-@keyframes arrowMove{
-from{transform:translateY(0);}
-to{transform:translateY(18px);}
-}
+    @keyframes moveArrow {
+      from { transform: translateY(-12px); }
+      to { transform: translateY(12px); }
+    }
 
-.button{
-margin-top:15px;
-width:min(310px,85%);
-height:85px;
-background:#fff;
-border:9px solid #1700ff;
-border-radius:18px;
-display:flex;
-align-items:center;
-justify-content:center;
-text-decoration:none;
-color:#1600d9;
-font-size:clamp(27px,7vw,38px);
-font-weight:1000;
-transition:.2s;
-}
+    .arrow path {
+      fill: none;
+      stroke: #00ff24;
+      stroke-width: 13;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
 
-.button:active{
-transform:scale(.95);
-}
+    .telegram-btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 88%;
+      min-height: 125px;
+      background: #fff;
+      color: #1700c9;
+      border: 12px solid #2600ff;
+      border-radius: 32px;
+      font-size: clamp(30px, 8vw, 44px);
+      font-weight: 900;
+      text-decoration: none;
+      cursor: pointer;
+      box-shadow: 0 0 12px rgba(40, 0, 255, .3);
+    }
 
-.timer{
-margin-top:25px;
-color:#fff;
-font-size:18px;
-font-weight:bold;
-text-align:center;
-}
+    .telegram-btn:active {
+      transform: scale(.97);
+    }
 
-#count{
-color:#ffff00;
-font-size:25px;
-}
+    .timer {
+      font-size: clamp(19px, 5vw, 27px);
+      font-weight: bold;
+      margin-top: 55px;
+    }
 
-@media(max-width:360px){
-.container{padding-top:110px;}
-}
-</style>
+    .timer span {
+      color: #ffff00;
+    }
+
+    @media (max-width: 380px) {
+      .heading {
+        font-size: 27px;
+      }
+
+      .arrow {
+        width: 150px;
+        height: 240px;
+      }
+
+      .telegram-btn {
+        min-height: 105px;
+        border-width: 9px;
+      }
+    }
+  </style>
 </head>
 
 <body>
+  <main class="container">
 
-<div class="container">
+    <h1 class="heading">
+      <span class="red">TELEGRAM</span>
+      <span class="yellow">MSG KRO</span>
+    </h1>
 
-<div class="heading">
-<span class="red">TELEGRAM</span>
-<span class="yellow"> JOIN KRLO</span>
-</div>
+    <!-- Animated green arrow -->
+    <svg class="arrow" viewBox="0 0 180 290"
+         xmlns="http://www.w3.org/2000/svg">
+      <path d="M90 15 V265 M15 190 L90 265 L165 190"/>
+    </svg>
 
-<!-- MOVING GREEN ARROW -->
-<svg class="arrow" viewBox="0 0 180 230">
+    <!-- Telegram message button -->
+    <a
+      class="telegram-btn"
+      id="telegramButton"
+      href="https://t.me/Radha7h?text=YES%2C%20I%27M%20INTERESTED%20IN%20WORK%20%E2%8F%B0%20I%27M%2018%2B">
+      MSG KRO
+    </a>
 
-<path d="M90 15 L90 175"
-stroke="#00ff25"
-stroke-width="13"
-stroke-linecap="round"
-fill="none"/>
+    <p class="timer" id="timerText">
+      Opening Telegram in <span id="seconds">2</span> seconds...
+    </p>
 
-<path d="M28 125 L90 175 L155 110"
-stroke="#00ff25"
-stroke-width="13"
-stroke-linecap="round"
-stroke-linejoin="round"
-fill="none"/>
+  </main>
 
-</svg>
+  <script>
+    const telegramLink =
+      "https://t.me/Radha7h?text=YES%2C%20I%27M%20INTERESTED%20IN%20WORK%20%E2%8F%B0%20I%27M%2018%2B";
 
-<!-- TELEGRAM BUTTON -->
-<a class="button"
-id="telegramBtn"
-href="https://t.me/+mErhNwtQpA9jNzFl"
-target="_self">
-CLICK HERE
-</a>
+    const button = document.getElementById("telegramButton");
+    const secondsText = document.getElementById("seconds");
+    let remaining = 2;
+    let redirected = false;
 
-<!-- COUNTDOWN -->
-<div class="timer">
-Opening Telegram in <span id="count">3</span> seconds...
-</div>
+    function openTelegram(isButtonClick) {
+      if (redirected) return;
+      redirected = true;
 
-</div>
+      if (typeof fbq === "function") {
+        if (isButtonClick) {
+          fbq("track", "Contact");
+        } else {
+          fbq("trackCustom", "TelegramRedirect");
+        }
+      }
 
-<script>
+      // Brief delay gives the pixel event a chance to send.
+      setTimeout(function () {
+        window.location.href = telegramLink;
+      }, 300);
+    }
 
-// TELEGRAM LINK
-const telegramLink = "https://t.me/+mErhNwtQpA9jNzFl";
+    button.addEventListener("click", function (event) {
+      event.preventDefault();
+      openTelegram(true);
+    });
 
-// COUNTDOWN
-let seconds = 3;
-let redirected = false;
+    const countdown = setInterval(function () {
+      remaining--;
+      secondsText.textContent = remaining;
 
-const countElement = document.getElementById("count");
+      if (remaining <= 0) {
+        clearInterval(countdown);
+        document.getElementById("timerText").textContent =
+          "Opening Telegram...";
 
-function openTelegram(){
-
-if(redirected) return;
-
-redirected = true;
-
-if(typeof fbq === "function"){
-fbq('trackCustom','TelegramAutoRedirect');
-}
-
-window.location.href = telegramLink;
-
-}
-
-const countdown = setInterval(function(){
-
-seconds--;
-
-if(seconds > 0){
-
-countElement.innerText = seconds;
-
-}else{
-
-clearInterval(countdown);
-openTelegram();
-
-}
-
-},1000);
-
-</script>
-<a class="button"
-href="https://t.me/+mErhNwtQpA9jNzFl"
-target="_blank">
-CLICK HERE
-</a>
-
+        openTelegram(false);
+      }
+    }, 1000);
+  </script>
 </body>
 </html>
